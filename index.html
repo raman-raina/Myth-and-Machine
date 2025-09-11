@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Recognition Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="project-title">The Myth and the Machine</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#dataset">Dataset</a>
+      <a href="#results">Results</a>
+      <a href="#future">Future Work</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="demo">
+      <h2>Upload the image</h2>
+
+      <label>Upload Image:</label>
+      <input id="imageInput" type="file" accept="image/*"><br><br>
+
+      <button onclick="sendData()">Submit</button>
+      <p>Result: <span id="output"></span></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Made by Raman Raina | <a href="https://github.com/raman-raina">GitHub</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
