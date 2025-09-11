@@ -5,7 +5,6 @@ This project uses a Convolutional Neural Network (CNN) to classify Elder Futhark
 ## Features
 - Classifies 24 Viking rune characters from the **Elder Futhark**
 - Uses custom image dataset
-- CNN model with ~90% accuracy
 - Automatic label extraction + augmentation
 - Batch image prediction support
 
@@ -20,6 +19,7 @@ This CNN-based model was tested on a custom dataset of 24 Elder Futhark rune cla
 - **Estimated Accuracy:** ~83%
 
 > With further fine-tuning, the model consistently achieves high accuracy on real-world rune images.
+
 
 
 
