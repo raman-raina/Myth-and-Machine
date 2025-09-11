@@ -9,8 +9,7 @@ async function sendData() {
   const formData = new FormData();
   formData.append("file", fileInput);
 
-  // Replace with your deployed backend URL
-  const backendURL = "https://image-recognition-backend.onrender.com/predict";
+  const backendURL = "https://rune-classifier.onrender.com/predict";
 
   try {
     const response = await fetch(backendURL, {
@@ -24,4 +23,5 @@ async function sendData() {
   } catch (error) {
     document.getElementById("output").innerText = "Error: " + error.message;
   }
+
 }
