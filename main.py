@@ -2,13 +2,11 @@ import os
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 
-# Path to the parent folder containing all rune subfolders
 parent_folder = '/content/dataset/Elder futhark'
 
 num_images_needed = 200
 augmentations_per_image = num_images_needed // 5  
 
-# Automatically find all subfolders in the parent folder
 folders = [os.path.join(parent_folder, name) for name in os.listdir(parent_folder)
            if os.path.isdir(os.path.join(parent_folder, name))]
 
@@ -22,7 +20,6 @@ datagen = ImageDataGenerator(
     fill_mode='nearest'  
 )
 
-# Augmentation loop
 for folder in folders:
     print(f"Processing folder: {folder}")
 
@@ -40,9 +37,8 @@ for folder in folders:
 
 print(f"\nGenerated {num_images_needed * len(folders)} augmented images.\n")
 
-# Renaming loop
 for folder_path in folders:
-    files = sorted(os.listdir(folder_path))  # Sort to keep order consistent
+    files = sorted(os.listdir(folder_path))  
 
     for i, filename in enumerate(files):
         old_file = os.path.join(folder_path, filename)
@@ -55,13 +51,10 @@ print("Renaming completed for all folders.")
 
 import tensorflow as tf
 
-# Define the parent directory containing your class folders
 dataset_path = '/content/dataset/Elder futhark'  # This should contain folders like a, b, c, etc.
 
-# Create an ImageDataGenerator for preprocessing
 datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)
 
-# Create a training generator that flows from the directory
 train_generator = datagen.flow_from_directory(
     dataset_path,
     target_size=(150, 150),  
@@ -69,7 +62,6 @@ train_generator = datagen.flow_from_directory(
     class_mode='categorical'
 )
 
-# Build the CNN model
 from tensorflow.keras import layers, models
 
 model = models.Sequential([
@@ -87,5 +79,6 @@ model = models.Sequential([
 model.compile(optimizer='adam',
               loss='categorical_crossentropy',
               metrics=['accuracy'])
+
 
 model.fit(train_generator, epochs=3)
