@@ -3,37 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Recognition Project</title>
-  <link rel="stylesheet" href="style.css">
+  <title>My ML Project</title>
 </head>
-<body>
-  <header>
-    <h1 id="project-title">The Myth and the Machine</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#dataset">Dataset</a>
-      <a href="#results">Results</a>
-      <a href="#future">Future Work</a>
-    </nav>
-  </header>
+<body bgcolor="#f9fafb" text="#222" link="#0070f3" vlink="#0059c1" alink="#ff0000">
 
-  <main>
+  <!-- Header -->
+  <table width="100%" bgcolor="white" cellpadding="15" cellspacing="0" border="0">
+    <tr>
+      <td>
+        <font face="Arial" size="6" color="#0070f3"><b>Metal Detector</b></font>
+      </td>
+      <td align="right">
+        <a href="#about"><font face="Arial" size="4" color="#444">About</font></a> |
+        <a href="#dataset"><font face="Arial" size="4" color="#444">Dataset</font></a> |
+        <a href="#results"><font face="Arial" size="4" color="#444">Results</font></a> |
+        <a href="#future"><font face="Arial" size="4" color="#444">Future Work</font></a>
+      </td>
+    </tr>
+  </table>
 
-    <section id="demo">
-      <h2>Upload the image</h2>
+  <!-- Main -->
+  <center>
+    <table width="80%" cellpadding="20" cellspacing="0" border="1" bordercolor="#ddd" bgcolor="white">
+      <tr>
+        <td>
+          <a name="about"></a>
+          <font face="Arial" size="5" color="#0070f3"><b>About</b></font>
+          <p><font face="Arial" size="3" color="#555">
+            <!-- About content here -->
+          </font></p>
+        </td>
+      </tr>
+    </table>
 
-      <label>Upload Image:</label>
-      <input id="imageInput" type="file" accept="image/*"><br><br>
+    <br>
 
-      <button onclick="sendData()">Submit</button>
-      <p>Result: <span id="output"></span></p>
-    </section>
+    <!-- Demo Section -->
+    <table width="80%" cellpadding="20" cellspacing="0" border="1" bordercolor="#ddd" bgcolor="white">
+      <tr>
+        <td>
+          <a name="demo"></a>
+          <font face="Arial" size="5" color="#0070f3"><b>Enter text</b></font>
+          <p><font face="Arial" size="3" color="#555">
+            Enter your philosophical thoughts here and let the neural network find your philosopher.
+          </font></p>
 
-  </main>
+          <input id="userInput" type="text" placeholder="Enter text..." size="1000">
+          <br><br>
+          <input type="button" value="Submit" onclick="sendData()" style="background:#0070f3;color:white;padding:10px 20px;border:none;">
+          <p><font face="Arial" size="3">Result: <b><span id="output"></span></b></font></p>
+        </td>
+      </tr>
+    </table>
+  </center>
 
-  <footer>
-    <p>Made by Raman Raina | <a href="https://github.com/raman-raina">GitHub</a></p>
-  </footer>
+  <br>
+
+  <!-- Footer -->
+  <center>
+    <font face="Arial" size="2" color="#777">
+      Made by Raman Raina | 
+      <a href="https://github.com/yourusername"><font color="#0070f3">GitHub</font></a>
+    </font>
+  </center>
 
   <script src="script.js"></script>
 </body>
