@@ -7,7 +7,6 @@
 </head>
 <body bgcolor="#f9fafb" text="#222" link="#0070f3" vlink="#0059c1" alink="#ff0000">
 
-  <!-- Header -->
   <table width="100%" bgcolor="white" cellpadding="15" cellspacing="0" border="0">
     <tr>
       <td>
@@ -22,7 +21,6 @@
     </tr>
   </table>
 
-  <!-- Main -->
   <center>
     <table width="80%" cellpadding="20" cellspacing="0" border="1" bordercolor="#ddd" bgcolor="white">
       <tr>
@@ -30,7 +28,6 @@
           <a name="about"></a>
           <font face="Arial" size="5" color="#0070f3"><b>About</b></font>
           <p><font face="Arial" size="3" color="#555">
-            <!-- About content here -->
           </font></p>
         </td>
       </tr>
@@ -38,7 +35,6 @@
 
     <br>
 
-    <!-- Demo Section -->
     <table width="80%" cellpadding="20" cellspacing="0" border="1" bordercolor="#ddd" bgcolor="white">
       <tr>
         <td>
@@ -48,7 +44,7 @@
             Enter your philosophical thoughts here and let the neural network find your philosopher.
           </font></p>
 
-          <input id="userInput" type="text" placeholder="Enter text..." size="1000">
+          <textarea id="userInput" rows="4" cols="50" placeholder="Enter text..."></textarea>
           <br><br>
           <input type="button" value="Submit" onclick="sendData()" style="background:#0070f3;color:white;padding:10px 20px;border:none;">
           <p><font face="Arial" size="3">Result: <b><span id="output"></span></b></font></p>
@@ -59,7 +55,6 @@
 
   <br>
 
-  <!-- Footer -->
   <center>
     <font face="Arial" size="2" color="#777">
       Made by Raman Raina | 
