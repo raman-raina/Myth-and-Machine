@@ -16,9 +16,10 @@ This project uses a Convolutional Neural Network (CNN) to classify Elder Futhark
 This CNN-based model was tested on a custom dataset of 24 Elder Futhark rune classes.
 
 - **Correctly Classified:** 20 out of 24 rune images
-- **Estimated Accuracy:** ~83%
+- **Accuracy:** ~83%
 
 > With further fine-tuning, the model consistently achieves high accuracy on real-world rune images.
+
 
 
 
